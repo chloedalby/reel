@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------------
+ * Nav
+ *------------------------------------------------------------------*/
+
+.footer {
+    max-width: 600px;
+
+    @media (min-width: $bp-small) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-icon {
+        max-width: 25px;
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+.menu-container {
+    padding: $unit-medium;
+}
+
+.nav-avatar {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+    border-radius: 100%;
+}

@@ -1,0 +1,342 @@
+/*--------------------------------------------------------------------
+ * Images
+ *------------------------------------------------------------------*/
+
+img {
+    display: block;
+}
+
+.circle-portrait {
+    border-radius: 300px;
+    max-height: 350px;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-bottom: $unit-small;
+
+    &.photo {
+        max-height: 300px;
+        max-width: 300px;
+    }
+}
+
+//Hero images
+
+.hero {
+    background-position: center;
+    background-size: cover;
+    min-height: 200px;
+
+    @media (min-width: $bp-small) {
+        min-height: 350px;
+    }
+
+    &.contain {
+        @media (min-width: $bp-xlarge) {
+            background-size: contain;
+        }
+    }
+}
+
+//Placeholder
+.hero-placeholder {
+    background-image: url("http://placehold.it/150x150");
+}
+
+//Inkling Axis Icon images
+
+.hero-axis-1 {
+    background-image: url("../img/axis-bg-1.jpg");
+}
+
+.hero-axis-2 {
+    background-image: url("../img/axis-bg-2.jpg");
+}
+
+.hero-axis-3 {
+    background-image: url("../img/inkling-axis.gif");
+}
+
+.hero-axis-4 {
+    background-image: url("../img/axis-bg-4.jpg");
+    background-position: left;
+}
+
+//Inkling Video images
+
+.hero-video-1 {
+    background-image: url("../img/video-bg-1.jpg");
+}
+
+.hero-video-2 {
+    background-image: url("../img/video-bg-2.jpg");
+    border-top: 1px solid #efefef;
+    background-size: 130%;
+
+    @media (min-width: $bp-small) {
+        background-size: cover;
+    }
+}
+
+.hero-video-3 {
+    background-image: url("../img/video-bg-3.jpg");
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+}
+
+.hero-video-4 {
+    background-image: url("../img/aai-video-bg-1.jpg");
+    background-position: left;
+
+    @media (min-width: $bp-small) {
+        background-position: top;
+    }
+}
+
+.hero-video-5 {
+    background-image: url("../img/aai-video-bg-2.jpg");
+    background-position: left;
+}
+
+.hero-video-6 {
+    background-image: url("../img/aai-video-bg-3.jpg");
+    background-position: left;
+    min-height: 200px;
+
+    @media (min-width: $bp-small) {
+        min-height: 400px;
+    }
+}
+
+//Inkling Content Images
+
+.hero-content-1 {
+    background-image: url("../img/content-bg-1.jpg");
+    background-position: center;
+}
+
+.hero-content-2 {
+    background-image: url("../img/content-bg-2.jpg");
+    background-position: bottom;
+    background-size: 100%;
+}
+
+//Fun stuff images
+.hero-fun-1 {
+    background-image: url("../img/fun-bg-1.jpg");
+    background-position: center;
+}
+
+.hero-fun-2 {
+    background-image: url("../img/menagerie.jpg");
+    background-position: center;
+}
+
+.hero-fun-3 {
+    background-image: url("../img/fun-bg-2.jpg");
+    background-position: left;
+    min-height: 200px;
+
+    @media (min-width: $bp-small) {
+        min-height: 400px;
+    }
+}
+
+.hero-fun-4 {
+    background-image: url("../img/buttons.jpg");
+    background-position: center;
+}
+
+.hero-fun-5 {
+    background-image: url("../img/gingham-hero.jpg");
+    background-position: center;
+}
+
+.hero-fun-6 {
+    background-image: url("../img/gingham-photo.jpg");
+    background-position: bottom;
+}
+
+.hero-test {
+    background-image: url("../img/tester.png");
+    background-position: center;
+}
+
+.shadow {
+    box-shadow: 0px 0px 10px #c6c6c6;
+}
+
+.rounded-corners {
+    border-radius: 40px;
+}
+
+.img-300-grid {
+    // Keeps images in a one-half grid at 300px
+    max-width: 300px;
+}
+
+.img-200-grid {
+    // Keeps images in a one-half grid at 200px
+    max-width: 200px;
+}
+
+.max-500 {
+    max-width: 500px;
+}
+
+.border {
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid $light-gray;
+}
+
+.border-top {
+    border-top: 1px solid #efefef;
+}
+
+.image-border {
+    opacity: 0;
+
+    @media (min-width: $bp-small) {
+        opacity: 1;
+        margin-left: $unit-large;
+        margin-right: $unit-large;
+    }
+
+    @media (min-width: $bp-large) {
+        opacity: 1;
+        width: 87%;
+        margin-left: $unit-large * 1.5;
+        margin-right: $unit-large * 1.5;
+    }
+}
+
+.constrain {
+    @media (min-width: $bp-xlarge) {
+        max-width: 75%;
+    }
+}
+
+.top-line {
+    border: 2px solid $white;
+
+    &.purple {
+        border-top: 2px solid #533A71;
+    }
+
+    &.periwinkle {
+        border-top: 2px solid #6184DB;
+    }
+
+    &.seafoam {
+        border-top: 2px solid #50C5B7;
+    }
+
+    &.lime {
+        border-top: 2px solid #9CEC5B;
+    }
+
+    &.lemon {
+        border-top: 2px solid #F0F465;
+    }
+
+    &.coral {
+        border-top: 2px solid #FE7A7D;
+    }
+
+    &:hover {
+        &.purple {
+            border: 2px solid #533A71;
+        }
+
+        &.periwinkle {
+            border: 2px solid #6184DB;
+        }
+
+        &.seafoam {
+            border: 2px solid #50C5B7;
+        }
+
+        &.lime {
+            border: 2px solid #9CEC5B;
+        }
+
+        &.lemon {
+            border: 2px solid #F0F465;
+        }
+
+        &.coral {
+        border: 2px solid #FE7A7D;
+    }
+    }
+}
+
+.bg-blank {
+    padding: $unit-medium;
+    position: relative;
+    box-shadow: 0px 0px 8px #efefef;
+    background-color: rgba(255, 255, 255, 1);
+
+    p {
+        color: $dark-gray !important;
+    }
+
+    .triangle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 40px solid $link-blue;
+        border-left: 40px solid transparent;
+
+        &.purple {
+            border-top: 40px solid #533A71;
+        }
+
+        &.periwinkle {
+            border-top: 40px solid #6184DB;
+        }
+
+        &.seafoam {
+            border-top: 40px solid #50C5B7;
+        }
+
+        &.lime {
+            border-top: 40px solid #9CEC5B;
+        }
+
+        &.lemon {
+            border-top: 40px solid #F0F465;
+        }
+    }
+}
+
+.hover {
+    &:hover {
+        background-image: url("../img/grid-5.jpg");
+        background-size: cover;
+    }
+}
+
+footer {
+    p {
+        font-family: "Muli", serif;
+    }
+}
+
+.bg-1 {
+    background-image: url("../img/grid-1.png");
+    background-size: cover;
+    box-shadow: 0px 0px 8px #b5b5b5;
+}
+
+.bg-2 {
+    background-image: url("../img/grid-2.jpg");
+    background-size: cover;
+    box-shadow: 0px 0px 8px #b5b5b5;
+}
+
+.bg-3 {
+    background-image: url("../img/grid-3.jpg");
+    background-size: cover;
+    box-shadow: 0px 0px 8px #b5b5b5;
+}

@@ -1,0 +1,134 @@
+/*--------------------------------------------------------------------
+ * Mixins
+ *------------------------------------------------------------------*/
+
+//--------------------------------------------------------------------
+// Clearfix
+//--------------------------------------------------------------------
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin clearboth {
+    clear: both;
+}
+
+//--------------------------------------------------------------------
+// Fractional widths 80% at mobile
+//--------------------------------------------------------------------
+
+@mixin fractional-width {
+    width: 80%;
+}
+
+//--------------------------------------------------------------------
+// Vertically Align
+//--------------------------------------------------------------------
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//--------------------------------------------------------------------
+// Full Bleed
+//--------------------------------------------------------------------
+
+@mixin full-bleed {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+//--------------------------------------------------------------------
+// Full Bleed Restore Padding
+//--------------------------------------------------------------------
+
+@mixin bleed-padding {
+    @media (min-width: $bp-large) {
+        padding-left: $unit-large * 1.5;
+        padding-right: $unit-large * 1.5;
+    }
+}
+
+@mixin content-extra-large {
+    padding: $unit-medium;
+    padding-left: $unit-small;
+    padding-right: $unit-small;
+
+    @media (min-width: $bp-small) {
+        padding: $unit-large;
+        padding-left: $unit-large;
+        padding-right: $unit-large;
+    }
+
+    @media (min-width: $bp-large) {
+        padding: $unit-large;
+        padding-left: $unit-large * 1.5;
+        padding-right: $unit-large * 1.5;
+    }
+}
+
+// Restore left padding to bleed
+@mixin push-left {
+    @include content-extra-large;
+
+    padding-top: 0;
+
+    @media (min-width: $bp-large) {
+        padding: 0 0 0 ($unit-large * 1.5);
+    }
+}
+
+// Restore right padding to bleed
+@mixin push-right {
+    padding-left: $unit-small;
+    padding-right: $unit-small;
+
+    @media (min-width: $bp-large) {
+        padding-right: $unit-large * 1.5;
+    }
+}
+
+//Vendor prefixing for transitions
+
+@mixin transition($value) {
+    @include prefix(transition, $value);
+}
+
+@mixin transition-prefix($prop, $value) {
+    -webkit-transition: -webkit-#{$prop} #{$value};
+    -moz-transition: -moz-#{$prop} #{$value};
+    -o-transition: -o-#{$prop} #{$value};
+    transition: #{$prop} #{$value};
+}
+
+@mixin transition($values...) {
+    $transitions: ();
+
+    @each $declaration in $values {
+        $prop: nth($declaration, 1);
+        $prop-opts: ();
+        $length: length($declaration);
+
+        @for $i from 2 through $length {
+            $prop-opts: append($prop-opts, nth($declaration, $i));
+        }
+
+        $trans: $prop, $prop-opts;
+        $transitions: append($transitions, $trans, comma);
+    }
+
+    -webkit-transition: trans-prefix($transitions, webkit);
+    -moz-transition: trans-prefix($transitions, moz);
+    -o-transition: trans-prefix($transitions, o);
+    transition: $values;
+}

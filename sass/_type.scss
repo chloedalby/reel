@@ -1,0 +1,250 @@
+/*--------------------------------------------------------------------
+ * Type
+ *------------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    line-height: 1.25;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $sans;
+}
+
+h1 {
+    font-size: 1.75rem;
+
+    @media (min-width: $bp-medium) {
+        font-size: 2rem;
+    }
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 1.25rem;
+
+    @media (min-width: $bp-medium) {
+        font-size: 1.5rem;
+    }
+}
+
+h3 {
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: $unit-small / 4;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-family: $serif;
+    font-size: .9rem;
+
+    @media (min-width: $bp-medium) {
+        font-size: .8rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.large-type {
+    font-size: 2rem;
+
+    @media (min-width: $bp-medium) {
+        font-size: 4rem;
+    }
+}
+
+.small-type {
+    font-size: .8rem;
+
+    @media (min-width: $bp-medium) {
+        font-size: .7rem;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+strong {
+    color: $dark-gray;
+}
+
+em {
+    font-style: italic;
+}
+
+b, .bold {
+    font-weight: 700;
+}
+
+hr {
+    position: relative;
+    margin: 1rem 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+ul, ol {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    font-size: .9rem;
+
+    @media (min-width: $bp-medium) {
+        font-size: .8rem;
+    }
+}
+
+small {
+    font-size: .75rem;
+}
+
+blockquote {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-align: center;
+    text-indent: -0.5em;
+    color: $blue;
+
+    @media (min-width: $bp-medium) {
+        font-size: 2rem;
+    }
+
+    &:before {
+        content: '\201C';
+        color: $blue;
+        display: block;
+        text-indent: 0;
+        font-size: 2rem;
+        margin-bottom: -1rem;
+
+        @media (min-width: $bp-medium) {
+            font-size: 3rem;
+        }
+    }
+}
+
+.link-text {
+    color: $link-blue;
+
+    &:visited {
+        color: $link-blue;
+    }
+}
+
+.white {
+    color: $white;
+}
+
+.project-title {
+    font-size: 1em;
+    font-family: $sans;
+    text-align: center;
+    color: $white;
+}
+
+.project-description {
+    font-family: "Maitree", sans-serif;
+    text-align: center;
+    color: $white;
+    font-size: 0.75rem;
+}
+
+.link-inline {
+    position: relative;
+    display: inline;
+    outline: none;
+    text-decoration: none;
+    font-weight: 600;
+    color: $link-blue;
+
+    &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        content: '';
+        background: $link-blue-light;
+
+        @include transition(width 0.3s ease);
+    }
+
+    &:hover:after {
+        width: 100%;
+    }
+}
+
+.link-inline-reverse {
+    position: relative;
+    display: inline;
+    outline: none;
+    text-decoration: none;
+    color: $white;
+
+    &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        content: '';
+        background: $white;
+
+        @include transition(width 0.3s ease);
+    }
+
+    &:hover:after {
+        width: 100%;
+    }
+}
+
+.button {
+    padding: ($unit-small / 2) $unit-small ($unit-small/1.5) ;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: $sans;
+    font-size: 17px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.button-pink {
+    background-color: #ff7a7e;
+    border: 1px solid #ff7a7e;
+    color: $white;
+
+    &:hover {
+        background-color: $white;
+        color: #ff7a7e;
+    }
+}
